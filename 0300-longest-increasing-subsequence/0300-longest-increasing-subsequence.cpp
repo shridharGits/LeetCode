@@ -22,10 +22,10 @@ public:
         int n = nums.size();
         int ans = 0;
         vector<vector<int>>dp(n+1, vector<int> (n+1, -1));
-        for(int i = 0; i<n; i++)
-        {
-            ans = max(ans, solve(i, -1, nums, dp));
-        }
+        // for(int i = 0; i<n; i++)
+        // {
+            ans = max(ans, solve(0, -1, nums, dp));
+        // }
         return ans;
     }
 };
